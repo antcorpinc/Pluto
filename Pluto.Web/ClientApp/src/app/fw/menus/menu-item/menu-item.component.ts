@@ -1,5 +1,5 @@
 import { Component,Input, OnInit } from '@angular/core';
-import {IMenuItem} from '../../services/menu.service';
+import {IMenuItem,MenuService} from '../../services/menu.service';
 
 @Component({
   selector: 'fw-menu-item',
@@ -13,7 +13,7 @@ export class MenuItemComponent implements OnInit {
 //@Input() item:MenuItem; // see angular-cli issue #2034
 @Input() item=<IMenuItem>null;
 
-  constructor() { }
+  constructor(public menuService:MenuService) { }
 
   ngOnInit() {
   }

@@ -12,6 +12,7 @@ export interface IMenuItem{
 export class MenuService {
 
   items:Array<IMenuItem>;
+  isVertical=false; //Info: When true menu on left nav instead of title bar
 
   constructor() { }
 
