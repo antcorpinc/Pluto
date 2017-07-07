@@ -12,6 +12,7 @@ import {ScreenService} from './services/screen.service';
 import {MenuService} from './services/menu.service';
 import { MenuComponent } from './menus/menu/menu.component';
 import { MenuItemComponent } from './menus/menu-item/menu-item.component';
+import { PopupMenuComponent } from './menus/popup-menu/popup-menu.component';
 
 @NgModule({
   imports: [
@@ -25,7 +26,8 @@ import { MenuItemComponent } from './menus/menu-item/menu-item.component';
     TopBarComponent,
     StatusBarComponent,
     MenuComponent,
-    MenuItemComponent],
+    MenuItemComponent,
+    PopupMenuComponent],
 
   providers:[
     FrameworkConfigService,
