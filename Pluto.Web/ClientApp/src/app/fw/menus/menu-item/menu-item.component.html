@@ -1,7 +1,7 @@
 <div class="menu-item"
 
   [ngClass]="{'vertical-menu': menuService.isVertical,'router-link-active': isActiveRoute  }"
-  (click)= "menuService.showingLeftSideMenu=false" >
+  >
   <span class="glyphicon {{item.icon}}" ></span>
   <span>{{item.text.toUpperCase()}}</span>
 
@@ -24,5 +24,6 @@
     (mouseleave)="onPopupMouseLeave($event)"
     (mouseenter)="onPopupMouseEnter($event)"
     [style.left.px]="popupLeft"
-    [style.top.px]="popupTop">
+    [style.top.px]="popupTop"
+    @visibilityChanged>
 </fw-popup-menu>
