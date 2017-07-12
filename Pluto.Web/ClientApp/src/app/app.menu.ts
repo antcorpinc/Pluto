@@ -75,5 +75,32 @@ export let initialMenuItems: Array<IMenuItem> = [
                 submenu: null
             }
         ]
+    },
+
+    {
+        text: 'Register',
+        icon: 'glyphicon-wrench',
+        route: null,
+        submenu: [
+            {
+                text: 'Register Society',
+                icon: 'glyphicon-cog',
+                route: 'register-society',
+                submenu: null
+            },
+            {
+                text: 'Register User',
+                icon: 'glyphicon-cog',
+                route: 'register-user',
+                submenu: null
+            }
+        ]
+    },
+
+    {
+        text: 'Signin',
+        icon: 'glyphicon-dashboard',
+        route: '/sigin',
+        submenu: null
     }
 ];

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import {RouterModule} from '@angular/router';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -15,11 +16,13 @@ import {MenuService} from './services/menu.service';
 import { MenuComponent } from './menus/menu/menu.component';
 import { MenuItemComponent } from './menus/menu-item/menu-item.component';
 import { PopupMenuComponent } from './menus/popup-menu/popup-menu.component';
+import { SignInComponent } from './users/sign-in/sign-in.component';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
+    FormsModule,
     BrowserAnimationsModule
   ],
   declarations: [
@@ -30,7 +33,8 @@ import { PopupMenuComponent } from './menus/popup-menu/popup-menu.component';
     StatusBarComponent,
     MenuComponent,
     MenuItemComponent,
-    PopupMenuComponent],
+    PopupMenuComponent,
+    SignInComponent],
 
   providers:[
     FrameworkConfigService,
