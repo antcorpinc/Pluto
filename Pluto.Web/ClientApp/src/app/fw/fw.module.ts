@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import {RouterModule} from '@angular/router';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MdInputModule} from '@angular/material';
 
 import { FrameworkBodyComponent } from './framework-body/framework-body.component';
 import { ContentComponent } from './content/content.component';
@@ -23,7 +24,8 @@ import { SignInComponent } from './users/sign-in/sign-in.component';
     CommonModule,
     RouterModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MdInputModule
   ],
   declarations: [
     FrameworkBodyComponent,
@@ -43,7 +45,8 @@ import { SignInComponent } from './users/sign-in/sign-in.component';
     ],
 
   exports:[
-    FrameworkBodyComponent
+    FrameworkBodyComponent,
+    MdInputModule
   ]
 
 })
