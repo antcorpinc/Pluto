@@ -54,7 +54,7 @@ export class MenuItemComponent implements OnInit {
         .subscribe((event) => {
             if (event instanceof NavigationEnd) {
                 this.checkActiveRoute(event.url);
-                console.log(event.url + ' ' + this.item.route + ' ' + this.isActiveRoute);
+                //console.log(event.url + ' ' + this.item.route + ' ' + this.isActiveRoute);
             }
         });
   }
