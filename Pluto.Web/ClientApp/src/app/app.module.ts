@@ -6,30 +6,21 @@ import 'hammerjs';
 import { AppComponent } from './app.component';
 
 import {FwModule} from './fw/fw.module';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { SettingsComponent } from './settings/settings.component';
-import {appRoutes} from './app.routing';
-import { CountryListComponent } from './country-list/country-list.component';
-import { CountryMaintComponent } from './country-maint/country-maint.component';
-import { CountryDetailComponent } from './country-detail/country-detail.component';
-import { RegisterUserComponent } from './register/register-user/register-user.component';
+
+import {AppRoutingModule,routableComponents} from './app-routing.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent,
-
-    SettingsComponent,
-    CountryListComponent,
-    CountryMaintComponent,
-    CountryDetailComponent,
-    RegisterUserComponent
+    routableComponents
   ],
   imports: [
     BrowserModule,
     FwModule,
-    RouterModule.forRoot(appRoutes)
 
+   // Info:Make sure the AppRouting is the last module here
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
