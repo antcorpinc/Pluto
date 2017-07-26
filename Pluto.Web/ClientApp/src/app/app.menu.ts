@@ -104,3 +104,13 @@ export let initialMenuItems: Array<IMenuItem> = [
         submenu: null
     }
 ];
+
+
+export let authenticatedMenuItems: Array<IMenuItem> = [
+    {
+        text: 'Dashboard',
+        icon: 'glyphicon-dashboard',
+        route: '/dashboard',
+        submenu: null
+    },
+];
