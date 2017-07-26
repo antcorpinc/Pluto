@@ -8,6 +8,7 @@ import {CountryDetailComponent} from './country-detail/country-detail.component'
 import {CountryMaintComponent} from './country-maint/country-maint.component';
 import {SignInComponent} from './fw/users/sign-in/sign-in.component';
 import {RegisterUserComponent} from './register/register-user/register-user.component';
+import {HomeComponent} from './home/home/home.component';
 
 export const routes: Routes = [
    { path: 'dashboard', component: DashboardComponent },
@@ -17,8 +18,8 @@ export const routes: Routes = [
    { path: 'country-maint', component: CountryMaintComponent },
    { path: 'settings', component: SettingsComponent },
    { path:'register-user',component:RegisterUserComponent},
-   { path: '', component: DashboardComponent },
-   { path: '**', component: DashboardComponent }
+   { path: '', component: HomeComponent },
+   { path: '**', component: HomeComponent }
 ];
 
 
