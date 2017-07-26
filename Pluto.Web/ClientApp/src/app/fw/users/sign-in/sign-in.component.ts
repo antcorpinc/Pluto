@@ -5,6 +5,11 @@ import { NgForm } from "@angular/forms";
 
 import {UserApi} from '../user-api';
 
+
+import {MenuService} from '../../services/menu.service'
+import {authenticatedMenuItems} from '../../../app.menu';
+
+
 @Component({
   selector: 'fw-sign-in',
   templateUrl: './sign-in.component.html',
@@ -16,7 +21,8 @@ export class SignInComponent implements OnInit {
   submitting = false;
 
   constructor(private userApi:UserApi,
-              private router:Router) { }
+              private router:Router,
+              private menuService:MenuService) { }
 
   ngOnInit() {
   }
@@ -34,6 +40,9 @@ export class SignInComponent implements OnInit {
             //ToDO: Get claims for the signed in user
             // Based on that update the menu
             //this.router.navigate(['/authenticated']);
+            //ToDO: The authenticated menu items is temporary
+            // Need to get it from Service
+          this.menuService.items= authenticatedMenuItems;
             this.router.navigate(['/dashboard']);
           },
           (err)=> {
