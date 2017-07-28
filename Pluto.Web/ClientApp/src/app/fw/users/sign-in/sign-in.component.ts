@@ -43,7 +43,8 @@ export class SignInComponent implements OnInit {
             //ToDO: The authenticated menu items is temporary
             // Need to get it from Service
           this.menuService.items= authenticatedMenuItems;
-            this.router.navigate(['/dashboard']);
+          //  this.router.navigate(['/dashboard']);
+          this.router.navigate(['/authenticated']);
           },
           (err)=> {
             this.submitting = false;
