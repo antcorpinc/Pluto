@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
-import { UserApi } from '../fw/users/user-api';
+import { UserApi } from '../../fw/users/user-api';
 import { Router } from '@angular/router';
 
 @Injectable()
