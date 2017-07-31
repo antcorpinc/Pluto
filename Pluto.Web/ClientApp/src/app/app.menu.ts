@@ -100,7 +100,7 @@ export let initialMenuItems: Array<IMenuItem> = [
     {
         text: 'Signin',
         icon: 'glyphicon-dashboard',
-        route: '/sigin',
+        route: '/signin',
         submenu: null
     }
 ];

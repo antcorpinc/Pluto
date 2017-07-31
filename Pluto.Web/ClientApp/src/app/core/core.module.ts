@@ -4,6 +4,8 @@ import {RouterModule} from '@angular/router';
 import { AuthenticatedUserComponent } from './authenticated-user/authenticated-user.component';
 
 import {UserService} from './services/user.service';
+import {AuthGuardService} from './services/auth-guard.service';
+
 import {UserApi}  from '../fw/users/user-api';
 
 
@@ -15,7 +17,8 @@ import {UserApi}  from '../fw/users/user-api';
   declarations: [AuthenticatedUserComponent],
    providers: [
     UserService,
-    { provide:UserApi,useExisting:UserService }
+    { provide:UserApi,useExisting:UserService },
+    AuthGuardService
   ],
 })
 export class CoreModule { }

@@ -11,18 +11,24 @@ import {RegisterUserComponent} from './register/register-user/register-user.comp
 import {HomeComponent} from './home/home/home.component';
 import {AuthenticatedUserComponent} from './core/authenticated-user/authenticated-user.component';
 
+import {AuthGuardService} from './core/services/auth-guard.service';
+
 export const routes: Routes = [
    { path: 'home', component:HomeComponent},
-   { path: 'sigin', component:SignInComponent},
+   { path: 'signin', component:SignInComponent},
    { path: 'authenticated',component:AuthenticatedUserComponent,
-     children :[
-       {path:'',redirectTo:'dashboard',pathMatch:'full'},
-       { path: 'dashboard', component: DashboardComponent },
-       { path: 'country-list/:count', component: CountryListComponent },
-       { path: 'country-detail/:country', component: CountryDetailComponent },
-       { path: 'country-maint', component: CountryMaintComponent },
-       { path: 'settings', component: SettingsComponent },
-       { path:'register-user',component:RegisterUserComponent},
+      canActivate:[AuthGuardService],
+      children :[
+            { path:'',canActivate:[AuthGuardService],
+              children:[
+              { path:'',redirectTo:'dashboard',pathMatch:'full'},
+              { path: 'dashboard', component: DashboardComponent },
+              { path: 'country-list/:count', component: CountryListComponent },
+              { path: 'country-detail/:country', component: CountryDetailComponent },
+              { path: 'country-maint', component: CountryMaintComponent },
+              { path: 'settings', component: SettingsComponent },
+              { path:'register-user',component:RegisterUserComponent},
+            ]}
      ]},
 
    { path: '', component: HomeComponent },
