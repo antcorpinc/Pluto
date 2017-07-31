@@ -14,7 +14,8 @@
 </div>
 
 <div *ngIf="frameworkConfigService.showUserControls">
-    <span>SIGN IN </span>
+    <span>SIGNED IN USER </span>
+    <span class="sign-out" (click)="signOut()" > SIGN OUT</span>
 
 </div>
 <!-- </md-toolbar> -->
