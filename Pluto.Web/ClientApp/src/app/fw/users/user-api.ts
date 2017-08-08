@@ -8,6 +8,8 @@ export abstract class UserApi {
 
  abstract isUserAuthenticated():boolean;
 
+ abstract getSignedInUser():string;
+
   //signout
   //change password
 }

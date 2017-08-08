@@ -1,6 +1,47 @@
 import { IMenuItem } from './fw/services/menu.service';
-
+//Todo: This is just a temporary file to get menu items
+// Ideally all this should come from a backend service
 export let initialMenuItems: Array<IMenuItem> = [
+
+    {
+        text: '',
+        icon: 'glyphicon glyphicon-align-justify',
+        route: null,
+        submenu: [
+            {
+                text: 'Register Society',
+                icon: 'glyphicon-cog',
+                route: 'register-society',
+                submenu: null
+            },
+            {
+                text: 'Register User',
+                icon: 'glyphicon-cog',
+                route: 'register-user',
+                submenu: null
+            }
+        ]
+    },
+
+    {
+        text: 'Signin',
+        icon: 'glyphicon glyphicon-log-in',
+        route: '/signin',
+        submenu: null
+    }
+];
+
+
+export let authenticatedMenuItems: Array<IMenuItem> = [
+    {
+        text: 'Dashboard',
+        icon: 'glyphicon-dashboard',
+        route: '/authenticated/dashboard',
+        submenu: null
+    },
+];
+
+export let allMenuItems: Array<IMenuItem> = [
     {
         text: 'Dashboard',
         icon: 'glyphicon-dashboard',
@@ -103,14 +144,4 @@ export let initialMenuItems: Array<IMenuItem> = [
         route: '/signin',
         submenu: null
     }
-];
-
-
-export let authenticatedMenuItems: Array<IMenuItem> = [
-    {
-        text: 'Dashboard',
-        icon: 'glyphicon-dashboard',
-        route: '/authenticated/dashboard',
-        submenu: null
-    },
 ];

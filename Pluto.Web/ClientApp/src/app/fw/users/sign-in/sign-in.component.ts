@@ -44,7 +44,7 @@ export class SignInComponent implements OnInit {
             // Need to get it from User Service- UPdate the UseApi
             // to add method which gets the authenticated menu items
             // for the signed in user.
-          this.menuService.items= authenticatedMenuItems;
+        //  this.menuService.items= authenticatedMenuItems;
           //  this.router.navigate(['/dashboard']);
           this.router.navigate(['/authenticated']);
           },

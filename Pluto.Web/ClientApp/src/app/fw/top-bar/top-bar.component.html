@@ -15,7 +15,7 @@
 </div>
 
 <div *ngIf="frameworkConfigService.showUserControls">
-    <span>SIGNED IN USER </span>
+    <span *ngIf="userApi.isUserAuthenticated()">{{userApi.getSignedInUser().toUpperCase()}} </span>
     <span *ngIf="userApi.isUserAuthenticated()"  class="sign-out" (click)="signOut()" > SIGN OUT</span>
 
 </div>
