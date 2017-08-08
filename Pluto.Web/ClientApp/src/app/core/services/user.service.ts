@@ -22,4 +22,9 @@ export class UserService implements UserApi {
     this.router.navigate(['/signin']);
     return Observable.of({});
   }
+
+  isUserAuthenticated(): boolean {
+    return this.isAuthenticated;
+  }
+
 }

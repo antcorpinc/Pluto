@@ -6,6 +6,8 @@ export abstract class UserApi {
 
  abstract signOut():Observable<any>;
 
+ abstract isUserAuthenticated():boolean;
+
   //signout
   //change password
 }

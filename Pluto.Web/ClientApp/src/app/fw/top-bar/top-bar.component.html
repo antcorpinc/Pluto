@@ -11,11 +11,12 @@
 <div *ngIf="frameworkConfigService.showLanguageSelector">
     <img class="flag-image" src="assets/barbados-flag-bw.png" alt="Flag">
     <span>BAJAN</span><span class="glyphicon glyphicon-chevron-down"></span>
+
 </div>
 
 <div *ngIf="frameworkConfigService.showUserControls">
     <span>SIGNED IN USER </span>
-    <span class="sign-out" (click)="signOut()" > SIGN OUT</span>
+    <span *ngIf="userApi.isUserAuthenticated()"  class="sign-out" (click)="signOut()" > SIGN OUT</span>
 
 </div>
 <!-- </md-toolbar> -->
