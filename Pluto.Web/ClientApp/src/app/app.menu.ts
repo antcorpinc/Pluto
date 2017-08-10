@@ -1,6 +1,6 @@
 import { IMenuItem } from './fw/services/menu.service';
 //Todo: This is just a temporary file to get menu items
-// Ideally all this should come from a backend service
+// Ideally all this should come from a backend service.
 export let initialMenuItems: Array<IMenuItem> = [
 
     {
