@@ -9,8 +9,8 @@ import {CoreModule} from './core/core.module';
 import { AppComponent } from './app.component';
 import {AppRoutingModule,routableComponents} from './app-routing.module';
 
-import {UserService} from './services/user.service';
-import {UserApi}  from './fw/users/user-api';
+//import {UserService} from './services/user.service';
+//import {UserApi}  from './fw/users/user-api';
 
 
 @NgModule({
@@ -27,8 +27,8 @@ import {UserApi}  from './fw/users/user-api';
     AppRoutingModule
   ],
   providers: [
-    UserService,
-    { provide:UserApi,useExisting:UserService }
+//    UserService,
+  //  { provide:UserApi,useExisting:UserService }
   ],
   bootstrap: [AppComponent]
 })

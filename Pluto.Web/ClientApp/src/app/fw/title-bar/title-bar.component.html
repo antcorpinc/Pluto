@@ -12,7 +12,9 @@
 
 
 <div *ngIf="screenService.isLarge()" class="title-bar user-title-bar">
-  <img src="assets/logo.png" alt="Green Nations Logo">
+  <img *ngIf="userApi.isUserAuthenticated()" src="assets/logo.png" alt="Green Nations Logo">
+  <img *ngIf="!userApi.isUserAuthenticated()" src="assets/logo1.png" alt="Green Nations Logo">
+
   <div class="menu-area" >
 
     <!-- Top Bar -->
