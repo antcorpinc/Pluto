@@ -5,7 +5,7 @@ import {ScreenService} from '../services/screen.service';
 @Component({
   selector: 'fw-content',
   templateUrl: './content.component.html',
-  styleUrls: ['./content.component.css']
+  styleUrls: ['./content.component.scss']
 })
 export class ContentComponent implements OnInit {
 
