@@ -5,6 +5,7 @@ import 'hammerjs';
 
 import {FwModule} from './fw/fw.module';
 import {HomeModule} from './home/home.module';
+import {DashboardModule} from './dashboard/dashboard.module';
 import {CoreModule} from './core/core.module';
 import { AppComponent } from './app.component';
 import {AppRoutingModule,routableComponents} from './app-routing.module';
@@ -22,6 +23,7 @@ import {AppRoutingModule,routableComponents} from './app-routing.module';
     BrowserModule,
     FwModule,
     HomeModule,
+    DashboardModule,
     CoreModule,
    // Info:Make sure the AppRouting is the last module here
     AppRoutingModule
