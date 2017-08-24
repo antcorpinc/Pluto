@@ -10,7 +10,7 @@ import {CoreModule} from './core/core.module';
 import { AppComponent } from './app.component';
 import {AppRoutingModule,routableComponents} from './app-routing.module';
 import { CountryPanelComponent } from './panels/country-panel/country-panel.component';
-import {ImagePanelComponent} from './panels/image-panel/image-panel.component';
+
 //import {UserService} from './services/user.service';
 //import {UserApi}  from './fw/users/user-api';
 
@@ -20,7 +20,7 @@ import {ImagePanelComponent} from './panels/image-panel/image-panel.component';
     AppComponent,
     routableComponents,
     CountryPanelComponent,
-    ImagePanelComponent
+
   ],
   imports: [
     BrowserModule,
