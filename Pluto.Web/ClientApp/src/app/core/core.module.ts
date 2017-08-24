@@ -7,7 +7,7 @@ import {UserService} from './services/user.service';
 import {AuthGuardService} from './services/auth-guard.service';
 
 import {UserApi}  from '../fw/users/user-api';
-
+import {AppDataService} from './services/app-data.service';
 
 @NgModule({
   imports: [
@@ -18,7 +18,8 @@ import {UserApi}  from '../fw/users/user-api';
    providers: [
     UserService,
     { provide:UserApi,useExisting:UserService },
-    AuthGuardService
+    AuthGuardService,
+    AppDataService
   ],
 })
 export class CoreModule { }
