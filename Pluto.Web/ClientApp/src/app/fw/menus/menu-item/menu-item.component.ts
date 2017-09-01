@@ -26,7 +26,7 @@ export class MenuItemComponent implements OnInit {
 
 
 // Info: the below had to commented bcos of issue with CLI which required i/f in separate file
-//@Input() item:MenuItem; // see angular-cli issue #2034
+//@Input() item:IMenuItem; // see angular-cli issue #2034
 @Input() item=<IMenuItem>null;
 @HostBinding('class.parent-is-popup')
   @Input() parentIsPopup = true;

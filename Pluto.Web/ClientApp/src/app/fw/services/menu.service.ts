@@ -19,7 +19,7 @@ export class MenuService {
   constructor() { }
 
   toggleLeftSideMenu() : void {
-    this.isVertical=true;
+    this.isVertical=true;// Info : For smaller devices there wont be  having horz menu
     this.showingLeftSideMenu = !this.showingLeftSideMenu;
   }
 
