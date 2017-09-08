@@ -20,6 +20,7 @@ import { PopupMenuComponent } from './menus/popup-menu/popup-menu.component';
 import { SignInComponent } from './users/sign-in/sign-in.component';
 import { PanelComponent } from './panels/panel/panel.component';
 
+import {TopBarService} from './top-bar/top-bar.service';
 @NgModule({
   imports: [
     CommonModule,
@@ -43,7 +44,8 @@ import { PanelComponent } from './panels/panel/panel.component';
   providers:[
     FrameworkConfigService,
     ScreenService,
-    MenuService
+    MenuService,
+    TopBarService
     ],
 
   exports:[

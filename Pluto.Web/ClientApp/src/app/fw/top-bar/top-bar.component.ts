@@ -3,6 +3,8 @@ import {FrameworkConfigService} from '../services/framework-config.service';
 import { UserApi} from '../users/user-api';
 import { Subject } from 'rxjs/Subject';
 
+import {TopBarService} from './top-bar.service';
+
 export interface ILanguage{
   name:string;
   id:number;
@@ -21,7 +23,7 @@ export class TopBarComponent implements OnInit {
 
   //Info: Need to inject as public since its properties are used in template for AOT
   constructor(public frameworkConfigService:FrameworkConfigService,
-  public userApi:UserApi) { }
+  public userApi:UserApi,public topBarService:TopBarService) { }
 
   ngOnInit() {
     this.getLanguages();
@@ -40,7 +42,10 @@ export class TopBarComponent implements OnInit {
 
   onApplicationChange($event){
     alert($event.target.value);
-    //this.appChangeSource.next($event.target.value);
-    this.userApi.refreshUser();
+   // this.appChangeSource.next($event.target.value);
+   // This is one way of refreshing user
+  //  this.userApi.refreshUser();
+  // This is second way of updating using event based.
+  this.topBarService.onAppChange($event);
     }
 }

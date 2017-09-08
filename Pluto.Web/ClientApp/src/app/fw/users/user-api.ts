@@ -10,6 +10,7 @@ export abstract class UserApi {
 
  abstract getSignedInUser():string;
 
+ // This is one way of refreshing user
  abstract refreshUser(applicationName?:string):void;
 
   //signout

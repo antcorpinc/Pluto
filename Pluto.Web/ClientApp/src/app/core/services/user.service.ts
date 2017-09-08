@@ -5,6 +5,9 @@ import { Router } from '@angular/router';
 import {MenuService} from '../../fw/services/menu.service';
 import {initialMenuItems,authenticatedMenuItems}
          from '../../app.menu';
+import  { TopBarService } from
+"../../fw/top-bar/top-bar.service";
+
 
 @Injectable()
 export class UserService implements UserApi {
@@ -17,7 +20,17 @@ export class UserService implements UserApi {
   private signedInUser='';
 
   constructor(private router:Router,
-    private menuService:MenuService) { }
+    private menuService:MenuService,
+  private topBarService:TopBarService) {
+
+    // This is second way of updating using event based.
+    topBarService.appChange$.subscribe((app)=>this.updateApp(app));
+   }
+   updateApp(appName){
+    //alert(appName);
+    this.menuService.items= authenticatedMenuItems;
+   }
+
 
   signIn(username: string, password: string, rememberMe: boolean):
   Observable<any> {
