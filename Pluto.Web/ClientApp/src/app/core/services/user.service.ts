@@ -8,6 +8,9 @@ import {initialMenuItems,authenticatedMenuItems}
 
 @Injectable()
 export class UserService implements UserApi {
+  refreshUser(applicationName?:string): void {
+    this.menuService.items= authenticatedMenuItems;
+  }
 
 
   isAuthenticated =false;

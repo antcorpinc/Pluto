@@ -10,6 +10,8 @@ export abstract class UserApi {
 
  abstract getSignedInUser():string;
 
+ abstract refreshUser(applicationName?:string):void;
+
   //signout
   //change password
 }
