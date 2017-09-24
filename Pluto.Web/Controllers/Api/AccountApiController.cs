@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Pluto.Web.Controllers.Api
 {
+    [Route("api/account")]
     public class AccountApiController:Controller {
             
             
