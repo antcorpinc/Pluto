@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import { Routes,RouterModule } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SettingsComponent } from './settings/settings.component';
@@ -14,20 +14,20 @@ import {AuthenticatedUserComponent} from './core/authenticated-user/authenticate
 import {AuthGuardService} from './core/services/auth-guard.service';
 
 export const routes: Routes = [
-   { path: 'home', component:HomeComponent},
-   { path: 'signin', component:SignInComponent},
-   { path: 'authenticated',component:AuthenticatedUserComponent,
-      canActivate:[AuthGuardService],
-      children :[
-            { path:'',canActivate:[AuthGuardService],
-              children:[
-              { path:'',redirectTo:'dashboard',pathMatch:'full'},
+   { path: 'home', component: HomeComponent},
+   { path: 'signin', component: SignInComponent},
+   { path: 'authenticated', component: AuthenticatedUserComponent,
+      canActivate: [AuthGuardService],
+      children : [
+            { path: '', canActivate: [AuthGuardService],
+              children: [
+              { path: '', redirectTo: 'dashboard', pathMatch: 'full'},
               { path: 'dashboard', component: DashboardComponent },
               { path: 'country-list/:count', component: CountryListComponent },
               { path: 'country-detail/:country', component: CountryDetailComponent },
               { path: 'country-maint', component: CountryMaintComponent },
               { path: 'settings', component: SettingsComponent },
-              { path:'register-user',component:RegisterUserComponent},
+              { path: 'register-user', component: RegisterUserComponent},
             ]}
      ]},
 
@@ -44,7 +44,7 @@ export const routes: Routes = [
 
 export class AppRoutingModule { }
 
-export const routableComponents =[
+export const routableComponents = [
   CountryListComponent,
   CountryDetailComponent,
   CountryMaintComponent,
