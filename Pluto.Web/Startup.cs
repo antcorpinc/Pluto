@@ -5,6 +5,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Pluto.Data;
 using Pluto.Models;
+using Pluto.Web.Core;
+using Pluto.Web.Services;
 
 namespace Pluto.Web
 {
@@ -43,6 +45,9 @@ namespace Pluto.Web
             
             services.AddIdentity<PlutoUser, PlutoRole>()
                     .AddEntityFrameworkStores<PlutoContext>();
+
+            services.AddTransient<IUserProfileService,UserProfileService>();
+            
 
         }
 
