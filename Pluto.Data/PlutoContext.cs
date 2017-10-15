@@ -11,6 +11,6 @@ namespace Pluto.Data
         public PlutoContext(DbContextOptions<PlutoContext> options) : base(options)
         {
 
-        }
+        }        
     }
 }

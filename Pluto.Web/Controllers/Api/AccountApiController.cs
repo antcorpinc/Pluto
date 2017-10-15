@@ -11,7 +11,8 @@ namespace Pluto.Web.Controllers.Api
 {
     [Authorize]
     //[Route("api/account")]
-    [Route("[controller]/[action]")]
+   // [Route("[controller]/[action]")]
+    [Route("api/[controller]")]
     
     public class AccountApiController:Controller {
 
@@ -21,7 +22,7 @@ namespace Pluto.Web.Controllers.Api
             _userProfileService = userProfileService;            
         }
 
-        [HttpPost]
+        [HttpPost("[action]")]
         [AllowAnonymous]
         public async Task<bool> Login(LoginViewModel loginViewModel)
         {
