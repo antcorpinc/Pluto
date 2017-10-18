@@ -19,7 +19,7 @@ namespace Pluto.Models
 
         // Is Form Admin ???
 
-        // ToDO: Add Relations 
+        //  Relationship
 
         [ForeignKey("UserId")]
          public PlutoUser Users { get; set; }

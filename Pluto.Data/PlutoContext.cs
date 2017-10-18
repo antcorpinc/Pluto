@@ -19,6 +19,7 @@ namespace Pluto.Data
         public DbSet <SocietyForm> SocietyForm {get;set;}
 
         public DbSet<UserFormTypeMapping> UserFormTypeMapping{get;set;}
+        public DbSet<FormTypeRolePrivilege> FormTypeRolePrivilege{get;set;}
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
