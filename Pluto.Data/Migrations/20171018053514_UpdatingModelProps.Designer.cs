@@ -12,9 +12,10 @@ using System;
 namespace Pluto.Data.Migrations
 {
     [DbContext(typeof(PlutoContext))]
-    partial class PlutoContextModelSnapshot : ModelSnapshot
+    [Migration("20171018053514_UpdatingModelProps")]
+    partial class UpdatingModelProps
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -238,24 +239,6 @@ namespace Pluto.Data.Migrations
                     b.ToTable("Society");
                 });
 
-            modelBuilder.Entity("Pluto.Models.SocietyForm", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("FormTypeId");
-
-                    b.Property<Guid>("SocietyId");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("FormTypeId");
-
-                    b.HasIndex("SocietyId");
-
-                    b.ToTable("SocietyForm");
-                });
-
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
                 {
                     b.HasOne("Pluto.Models.PlutoRole")
@@ -298,19 +281,6 @@ namespace Pluto.Data.Migrations
                     b.HasOne("Pluto.Models.PlutoUser")
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("Pluto.Models.SocietyForm", b =>
-                {
-                    b.HasOne("Pluto.Models.FormType", "FormType")
-                        .WithMany()
-                        .HasForeignKey("FormTypeId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("Pluto.Models.Society", "Society")
-                        .WithMany()
-                        .HasForeignKey("SocietyId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618

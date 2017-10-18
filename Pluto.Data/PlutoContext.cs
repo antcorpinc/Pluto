@@ -13,6 +13,12 @@ namespace Pluto.Data
 
         }
 
+        public DbSet<Society> Society {get;set;}
+        public DbSet<FormType> FormType {get;set;}
+
+        public DbSet <SocietyForm> SocietyForm {get;set;}
+
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
@@ -20,8 +26,8 @@ namespace Pluto.Data
             // Change the PlutoUser entity to point to the Users Table instead of the default
             builder.Entity<PlutoUser>().ToTable("Users");
 
-            builder.Entity<PlutoRole>().ToTable("Roles");
-            
+            builder.Entity<PlutoRole>().ToTable("Roles");           
+
         }
     }
 }

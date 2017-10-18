@@ -12,9 +12,10 @@ using System;
 namespace Pluto.Data.Migrations
 {
     [DbContext(typeof(PlutoContext))]
-    partial class PlutoContextModelSnapshot : ModelSnapshot
+    [Migration("20171018042931_InitialModelClasses")]
+    partial class InitialModelClasses
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -106,12 +107,9 @@ namespace Pluto.Data.Migrations
                 {
                     b.Property<int>("Id");
 
-                    b.Property<string>("Description")
-                        .HasMaxLength(200);
+                    b.Property<string>("Description");
 
-                    b.Property<string>("TypeName")
-                        .IsRequired()
-                        .HasMaxLength(30);
+                    b.Property<string>("TypeName");
 
                     b.HasKey("Id");
 
@@ -210,50 +208,27 @@ namespace Pluto.Data.Migrations
 
                     b.Property<string>("AdditionalPhoneNumber");
 
-                    b.Property<string>("AddressLine1")
-                        .IsRequired();
+                    b.Property<string>("AddressLine1");
 
                     b.Property<string>("AddressLine2");
 
-                    b.Property<string>("City")
-                        .IsRequired();
+                    b.Property<string>("City");
 
                     b.Property<string>("Description");
 
                     b.Property<string>("Locality");
 
-                    b.Property<string>("Name")
-                        .IsRequired();
+                    b.Property<string>("Name");
 
                     b.Property<string>("PhoneNumber");
 
-                    b.Property<string>("PinCode")
-                        .IsRequired();
+                    b.Property<string>("PinCode");
 
-                    b.Property<string>("State")
-                        .IsRequired();
+                    b.Property<string>("State");
 
                     b.HasKey("Id");
 
                     b.ToTable("Society");
-                });
-
-            modelBuilder.Entity("Pluto.Models.SocietyForm", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<int>("FormTypeId");
-
-                    b.Property<Guid>("SocietyId");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("FormTypeId");
-
-                    b.HasIndex("SocietyId");
-
-                    b.ToTable("SocietyForm");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
@@ -298,19 +273,6 @@ namespace Pluto.Data.Migrations
                     b.HasOne("Pluto.Models.PlutoUser")
                         .WithMany()
                         .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("Pluto.Models.SocietyForm", b =>
-                {
-                    b.HasOne("Pluto.Models.FormType", "FormType")
-                        .WithMany()
-                        .HasForeignKey("FormTypeId")
-                        .OnDelete(DeleteBehavior.Cascade);
-
-                    b.HasOne("Pluto.Models.Society", "Society")
-                        .WithMany()
-                        .HasForeignKey("SocietyId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
