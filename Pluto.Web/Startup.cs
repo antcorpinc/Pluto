@@ -5,8 +5,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Pluto.Data;
 using Pluto.Models;
+using Pluto.Services;
+using Pluto.Services.Interfaces;
 using Pluto.Web.Core;
-using Pluto.Web.Services;
+//using Pluto.Web.Services;
 
 namespace Pluto.Web
 {
@@ -45,10 +47,10 @@ namespace Pluto.Web
             
             services.AddIdentity<PlutoUser, PlutoRole>()
                     .AddEntityFrameworkStores<PlutoContext>();
-
-            services.AddTransient<IUserProfileService,UserProfileService>();
+            //Refactor : Not Used Anymore
+         //   services.AddTransient<IUserProfileService,UserProfileService>();
             
-
+            services.AddTransient<ISecurityService,SecurityService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

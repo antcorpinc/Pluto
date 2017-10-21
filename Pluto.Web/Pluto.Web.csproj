@@ -18,6 +18,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Pluto.Data\Pluto.Data.csproj" />
     <ProjectReference Include="..\Pluto.Models\Pluto.Models.csproj" />
+    <ProjectReference Include="..\Pluto.Services\Pluto.Services.csproj" />
   </ItemGroup>
 
 </Project>
