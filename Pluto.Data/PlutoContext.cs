@@ -22,7 +22,7 @@ namespace Pluto.Data
         public DbSet<FormTypeRolePrivilege> FormTypeRolePrivilege{get;set;}
 
         public DbSet<FormInstance> FormInstance {get;set;}
-       // public DbSet<FormInstanceApprover> FormInstanceApprover {get;set;}
+        public DbSet<FormInstanceApprover> FormInstanceApprover {get;set;}
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

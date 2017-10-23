@@ -11,7 +11,7 @@ namespace Pluto.Models{
 
         public FormInstance()
         {
-        //    FormInstanceApprovers = new HashSet<FormInstanceApprover>();
+            FormInstanceApprovers = new HashSet<FormInstanceApprover>();
         }
 
          [Key]
@@ -52,7 +52,7 @@ namespace Pluto.Models{
 
          //Navigation
 
-       // public ICollection<FormInstanceApprover> FormInstanceApprovers{get;set;}
+        public ICollection<FormInstanceApprover> FormInstanceApprovers{get;set;}
         
     }
 }
