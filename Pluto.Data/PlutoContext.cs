@@ -15,6 +15,8 @@ namespace Pluto.Data
 
         public DbSet<Society> Society {get;set;}
         public DbSet<FormType> FormType {get;set;}
+        public DbSet<FormStatus> FormStatus {get;set;}
+
 
         public DbSet <SocietyForm> SocietyForm {get;set;}
 

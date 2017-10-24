@@ -18,7 +18,7 @@ namespace Pluto.Models{
         public Guid Id {get;set;}
         public Guid SocietyId {get;set;}
         
-        public Pluto.Models.Enums.FormStatus StatusId {get;set;}
+        public Pluto.Models.Enums.FormStatus FormStatusId {get;set;}
 
         public DateTime WorkflowCompletedDate {get;set;}
 
@@ -39,6 +39,9 @@ namespace Pluto.Models{
 
            [ForeignKey("FormTypeId")]
         public FormType FormType { get; set; }
+
+          [ForeignKey("FormStatusId")]
+        public FormStatus FormStatus { get; set; }
 
         
         //Todo: Later -- Having issues when doing DB update on migrations.
