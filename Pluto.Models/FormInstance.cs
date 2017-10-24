@@ -20,15 +20,15 @@ namespace Pluto.Models{
         
         public Pluto.Models.Enums.FormStatus FormStatusId {get;set;}
 
-        public DateTime WorkflowCompletedDate {get;set;}
+        public DateTime? WorkflowCompletedDate {get;set;}
 
         public Guid InputterId {get;set;}
 
-        public int NextApproverOrder {get;set;}
+        public int? NextApproverOrder {get;set;}
 
         public Pluto.Models.Enums.FormType FormTypeId{get;set;}
 
-        public Guid ParentFormId {get;set;}
+        public Guid? ParentFormId {get;set;}
 
         public string FormInstanceContent {get;set;}
 
@@ -44,10 +44,8 @@ namespace Pluto.Models{
         public FormStatus FormStatus { get; set; }
 
         
-        //Todo: Later -- Having issues when doing DB update on migrations.
-        // For now deleting this constraint - Add later when made changes
-        // directly from DB and then reverse engg in sample proj to see
-        // Model changes accordingly.
+        //Info: We can't have FK relationship since ParentFormId
+        // Can be null so keep no need of the below
 
        // [ForeignKey("ParentFormId")]
        //  public FormInstance Parent { get; set; }
