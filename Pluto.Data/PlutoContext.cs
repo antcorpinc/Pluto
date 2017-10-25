@@ -23,6 +23,10 @@ namespace Pluto.Data
         public DbSet<UserFormTypeMapping> UserFormTypeMapping{get;set;}
         public DbSet<FormTypeRolePrivilege> FormTypeRolePrivilege{get;set;}
 
+        public DbSet<FeatureType> FeatureType {get;set;}
+        public DbSet<SocietyFeature> SocietyFeature {get;set;}
+        public DbSet<UserFeatureTypeMapping> UserFeatureTypeMapping{get;set;}
+
         public DbSet<FormInstance> FormInstance {get;set;}
         public DbSet<FormInstanceApprover> FormInstanceApprover {get;set;}
 

@@ -17,10 +17,7 @@ namespace Pluto.Models
         public string  Description {get;set;}
 
         public Pluto.Models.Enums.FeatureType? ParentFeatureId {get;set;}
-
-         // Relationship
-       //  [ForeignKey("ParentFeatureId")]
-       // public FeatureType Parent { get; set; }       
-
+        public int? Order{get;set;}
+         
     }
 }      
