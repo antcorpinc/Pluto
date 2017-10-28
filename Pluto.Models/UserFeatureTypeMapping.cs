@@ -2,6 +2,11 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
+/// <summary>
+/// Users belonging to an society with  role and having access to features
+// Ex. 'Roni' in 'MontVert' as 'Secretary' can 'AddUser'
+/// </summary>
+
 namespace Pluto.Models
 {
     public class UserFeatureTypeMapping 
@@ -17,7 +22,7 @@ namespace Pluto.Models
         public Guid RoleId {get;set;}
 
         [Required]
-        public Pluto.Models.Enums.FeatureType FeatureTypeId { get;set;}
+        public Enums.FeatureType FeatureTypeId { get;set;}
         
          //  Relationship
 
@@ -26,6 +31,8 @@ namespace Pluto.Models
 
          [ForeignKey("SocietyId")]
          public Society Society { get; set; }
+
+         //Relationship
 
          [ForeignKey("FeatureTypeId")]
         public FeatureType FeatureType { get; set; }

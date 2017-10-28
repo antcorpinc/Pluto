@@ -15,4 +15,7 @@ namespace Pluto.Models.Dtos{
 
          //ToDO Add FormUserDto
     }
+
+    // ToDO : Remove the DTO from the Models as mentioned by 
+    //https://ardalis.com/your-api-and-view-models-should-not-reference-domain-models
 }

@@ -6,6 +6,10 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Pluto.Models.Enums;
 
+/// <summary>
+/// Details of the Form Instance
+/// </summary>
+
 namespace Pluto.Models{
     public class FormInstance {
 

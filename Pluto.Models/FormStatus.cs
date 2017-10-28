@@ -1,12 +1,17 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 
+/// <summary>
+/// All applicable FormStatuses in the Pluto application Ex.Created/Submitted/Approved/Rejected
+/// </summary>
+
+// Todo: Add Navigation to FormInstance.
 namespace Pluto.Models
 {
     public class FormStatus 
     {  
         [Key]
-        public Pluto.Models.Enums.FormStatus Id {get;set;}
+        public Enums.FormStatus Id {get;set;}
 
         [Required]
         [MaxLength(30)]

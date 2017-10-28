@@ -2,6 +2,11 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
+/// <summary>
+/// Privileges associated with a role for a form Ex. Secretary  can CR | VW | AP  the contract form
+/// </summary>
+
+
 namespace Pluto.Models
 {
     public class FormTypeRolePrivilege 
@@ -10,7 +15,7 @@ namespace Pluto.Models
         public Guid Id {get;set;}
        
         [Required]
-        public  Pluto.Models.Enums.FormType FormTypeId {get;set;}
+        public  Enums.FormType FormTypeId {get;set;}
         [Required]
          public Guid RoleId {get;set;}
         

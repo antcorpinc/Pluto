@@ -2,6 +2,11 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
+/// <summary>
+/// Users belonging to an society with  role and having access to form
+/// Ex. Roni from MontVert as treasurer has access to finance/request and complaint forms
+/// </summary>
+
 namespace Pluto.Models
 {
     public class UserFormTypeMapping 
@@ -13,7 +18,7 @@ namespace Pluto.Models
         [Required]
         public Guid SocietyId {get;set;}
         [Required]
-        public Pluto.Models.Enums.FormType FormTypeId { get;set;}
+        public Enums.FormType FormTypeId { get;set;}
         [Required]
         public Guid RoleId {get;set;}
 
