@@ -34,8 +34,8 @@ namespace Pluto.Data
         {
             base.OnModelCreating(builder);
 
-            // Change the PlutoUser entity to point to the Users Table instead of the default
-            builder.Entity<PlutoUser>().ToTable("Users");
+            // Change the PlutoUser entity to point to the User Table instead of the default
+            builder.Entity<PlutoUser>().ToTable("User");
 
             builder.Entity<PlutoRole>().ToTable("Role");           
 

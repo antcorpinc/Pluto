@@ -27,7 +27,7 @@ namespace Pluto.Models
          //  Relationship
 
         [ForeignKey("UserId")]
-         public PlutoUser Users { get; set; }
+         public PlutoUser User { get; set; }
 
          [ForeignKey("SocietyId")]
          public Society Society { get; set; }
