@@ -38,7 +38,7 @@ namespace Pluto.Models
         public FeatureType FeatureType { get; set; }
      
         [ForeignKey("RoleId")]
-         public PlutoRole Roles { get; set; }
+         public PlutoRole Role { get; set; }
      
     }
 }

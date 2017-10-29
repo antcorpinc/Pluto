@@ -36,7 +36,7 @@ namespace Pluto.Models
         public FormType FormType { get; set; }
      
         [ForeignKey("RoleId")]
-         public PlutoRole Roles { get; set; }
+         public PlutoRole Role { get; set; }
      
     }
 }
