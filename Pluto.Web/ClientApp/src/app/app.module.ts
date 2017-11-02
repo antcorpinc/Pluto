@@ -1,8 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import 'hammerjs';
-
 import {FwModule} from './fw/fw.module';
 import {HomeModule} from './home/home.module';
 import {DashboardModule} from './dashboard/dashboard.module';

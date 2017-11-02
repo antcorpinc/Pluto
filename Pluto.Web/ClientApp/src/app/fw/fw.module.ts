@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import {RouterModule} from '@angular/router';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MdInputModule} from '@angular/material';
 
 import { FrameworkBodyComponent } from './framework-body/framework-body.component';
 import { ContentComponent } from './content/content.component';
@@ -27,7 +26,7 @@ import {TopBarService} from './top-bar/top-bar.service';
     RouterModule,
     FormsModule,
     BrowserAnimationsModule,
-    MdInputModule
+
   ],
   declarations: [
     FrameworkBodyComponent,
@@ -48,10 +47,9 @@ import {TopBarService} from './top-bar/top-bar.service';
     TopBarService
     ],
 
-  exports:[
+  exports: [
     FrameworkBodyComponent,
     PanelComponent,
-    MdInputModule
   ]
 
 })
