@@ -5,7 +5,7 @@ namespace Pluto.Services.Interfaces{
 
     public interface ISecurityService{
 
-        Task<bool> Login(Login loginViewModel);
+        Task<bool> Login(string username, string password);
     }
 }
 

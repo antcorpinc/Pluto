@@ -18,13 +18,13 @@ namespace Pluto.Services {
             _signInManager = signInManager;
         }
 
-        public async Task<bool> Login(Login loginModel)
+        public async Task<bool> Login(string username, string password)
         {
-           var user =  await _userManager.FindByEmailAsync(loginModel.UserName);
+           var user =  await _userManager.FindByNameAsync(username);
            if(user !=null)
            {
                var result = await _signInManager.PasswordSignInAsync
-               (user, loginModel.Password, false, false);
+               (user, password, false, false);
                if(result.Succeeded)
                   return true;
                

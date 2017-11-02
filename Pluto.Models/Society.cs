@@ -1,13 +1,14 @@
 using System;
 using System.ComponentModel.DataAnnotations;
 using System.Collections.Generic;
+using Pluto.Core.Contracts;
 
 namespace Pluto.Models
 {
     /// <summary>
 /// Represents the all societies  in the Pluto - Ex. MontVert ...
 /// </summary>
-    public class Society 
+    public class Society : IIdentifiableModel<Guid>
     {        
         public Society() {
             SocietyForms = new HashSet<SocietyForm>();
@@ -38,5 +39,6 @@ namespace Pluto.Models
         public ICollection<SocietyFeature> SocietyFeatures {get;set;}
         public ICollection<UserFormTypeMapping> UserFormTypeMappings {get;set;}
         public ICollection<UserFeatureTypeMapping> UserFeatureTypeMappings {get;set;}
+        
     }
 }
